@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pacific Ocean Berries - Inicio</title>
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      
+      <nav class="navbar">
+        <ul class="nav-links">
+          <li><a href="#inicio" class="nav-link">Inicio</a></li>
+          <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+          <li><a href="#productos" class="nav-link">Productos</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <!-- Contenedor principal -->
+      <div class="hero-container">
+        <!-- Imagen de fondo -->
+        
+          <img src="../images/arandanos4.jpg" height=400 alt="Campos de arándanos frescos al amanecer" />
+        
+    
+        <!-- Contenido textual sobre la imagen -->
+        <div class="hero-content">
+          <h1>Pacific Ocean Berries</h1>
+          <p>
+            Líderes en la producción y exportación de arándanos premium, <br />
+            cultivados con innovación, sostenibilidad y el sabor del Pacífico.
+          </p>
+          <a href="#productos" class="btn-primary">Ver Productos</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="nosotros" class="about">
+      <div class="container">
+        <h2>Sobre Nosotros</h2>
+        <p>Somos una empresa líder en la producción sostenible de arándanos, comprometidos con la innovación y el respeto por el medio ambiente.</p>
+      </div>
+    </section>
+
+    <section id="productos" class="products">
+      <div class="container">
+        <h2>Nuestros Productos</h2>
+        <div class="product-list">
+          <div class="product-item">
+            <img src="images/arandanos1.jpg" alt="Arándanos frescos">
+            <h3>Arándanos Frescos</h3>
+            <p>Arándanos cosechados con los más altos estándares de calidad.</p>
+          </div>
+          <div class="product-item">
+            <img src="images/arandanos2.jpg" alt="Arándanos congelados">
+            <h3>Arándanos Congelados</h3>
+            <p>La frescura y el sabor preservados para su conveniencia.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="contact">
+      <div class="container">
+        <h2>Contáctanos</h2>
+        <form action="#" method="POST">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required>
+
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="btn-primary">Enviar</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Pacific Ocean Berries. Innovación y calidad desde Perú para el mundo.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Agrega un efecto de scroll suave para la navegación
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', event => {
+        event.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>
